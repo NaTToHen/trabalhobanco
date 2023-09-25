@@ -21,10 +21,10 @@ include('conexao.php');
 
    <main class="main">
       <form action="lib/adiciona.php" method="post" class="adiciona">
-         <input type="text" placeholder="nome" name="nome">
-         <input type="text" placeholder="descrição" name="descricao">
-         <input type="text" placeholder="valor" name="valor">
-         <select class="select-form" name="categoria">
+         <input type="text" placeholder="nome" name="nome" required>
+         <input type="text" placeholder="descrição" name="descricao" required>
+         <input type="number" step="0.01" min="0" placeholder="valor" name="valor" required>
+         <select class="select-form" name="categoria" required>
                   <option value="" disabled selected>Selecione a categoria</option>
                   <?php
                   $sqlCategoria = "SELECT idCategoria, nome FROM Categoria ORDER BY idCategoria DESC";
@@ -34,7 +34,7 @@ include('conexao.php');
                      <option value="<?php echo $Categoria['idCategoria'] ?>"><?php echo $Categoria['nome'] ?></option>
                   <?php } ?>
          </select>
-         <select class="select-form" name="fornecedora">
+         <select class="select-form" name="fornecedora" required>
                   <option value="" disabled selected>Selecione a fornecedora</option>
                   <?php
                   $sqlFornecedora = "SELECT idFornecedora, nome FROM Fornecedora ORDER BY idFornecedora DESC";
@@ -44,7 +44,7 @@ include('conexao.php');
                      <option value="<?php echo $Fornecedora['idFornecedora'] ?>"><?php echo $Fornecedora['nome'] ?></option>
                   <?php } ?>
          </select>
-         <select class="select-form" name="endereco">
+         <select class="select-form" name="endereco" required>
                   <option value="" disabled selected>Selecione o endereço</option>
                   <?php
                   $sqlEndereco = "SELECT idEnderecoFabri, cidade, estado, rua FROM EnderecoFabri ORDER BY idEnderecoFabri DESC";

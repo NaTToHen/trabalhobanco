@@ -32,18 +32,18 @@ include('conexao.php');
          </thead>
          <tbody>
             <?php
-            $sqlProduto = "SELECT * FROM Produto ORDER BY idProduto DESC";
+            $sqlProduto = "SELECT * FROM ViewProduto ORDER BY idProduto ASC";
             $resultProduto = $conn->query($sqlProduto);
             while ($row = mysqli_fetch_array($resultProduto)) {
                $idProduto = $row['idProduto'];
                echo '
                   <tr class="linhaTabela">
                      <td>'.$row['idProduto'].'</td>
-                     <td>'.$row['nome'].'</td>
-                     <td>'.$row['descricao'].'</td>
-                     <td>'.$row['fkCategoria'].'</td>
-                     <td>'.$row['fkFornecedora'].'</td>
-                     <td>R$ '.$row['valor'].'</td>';
+                     <td>'.$row['NomeProduto'].'</td>
+                     <td>'.$row['DescricaoProduto'].'</td>
+                     <td>'.$row['NomeCategoria'].'</td>
+                     <td>'.$row['NomeFornecedora'].'</td>
+                     <td>R$ '.$row['ValorProduto'].'</td>';
             }
             ?>
          </tbody>

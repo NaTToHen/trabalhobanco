@@ -7,7 +7,4 @@ class Produto {
    private $fkCategoria;
    private $fkFornecedora;
    private $fkEnderecoFabri;
-
-
-   
 }
