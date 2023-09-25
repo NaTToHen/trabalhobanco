@@ -1,4 +1,6 @@
-
+<?php
+   include('conexao.php');
+?>
 
 
 <!DOCTYPE html>
@@ -21,39 +23,30 @@
       <table class="ler-tabela">
          <thead>
             <tr>
-               <th>id</th>
-               <th>nome</th>
-               <th>cpf</th>
-               <th>email</th>
-               <th>telefone</th>
-               <th>Editar</th>
-               <th>Excluir</th>
+               <th>Id</th>
+               <th>Nome</th>
+               <th>Desc</th>
+               <th>Categoria</th>
+               <th>Fornecedora</th>
+               <th>Valor</th>
             </tr>
          </thead>
          <tbody>
-            <!--<?php
-            $sqlProduto = "SELECT * FROM produto ORDER BY id_produto DESC";
-            $resultProduto = $conn->query($sqlUser);
-            while ($row = mysqli_fetch_array($resultUser)) {
-               $idUser = $row['id_user'];
+            <?php
+            $sqlProduto = "SELECT * FROM Produto ORDER BY idProduto DESC";
+            $resultProduto = $conn->query($sqlProduto);
+            while ($row = mysqli_fetch_array($resultProduto)) {
+               $idProduto = $row['idProduto'];
                echo '
                   <tr class="linhaTabela">
-                     <td>'.$row['id_user'].'</td>
+                     <td>'.$row['idProduto'].'</td>
                      <td>'.$row['nome'].'</td>
-                     <td>'.$row['cpf'].'</td>
-                     <td>'.$row['email'].'</td>
-                     <td>'.$row['telefone'].'</td>';
+                     <td>'.$row['descricao'].'</td>
+                     <td>'.$row['fkCategoria'].'</td>
+                     <td>'.$row['fkFornecedora'].'</td>
+                     <td>R$ '.$row['valor'].'</td>';
             }
-            ?>-->
-            <tr>
-               <td>05</td>
-               <td>teste</td>
-               <td>teste</td>
-               <td>teste</td>
-               <td>teste</td>
-               <td>teste</td>
-               <td>teste</td>
-            </tr>
+            ?>
          </tbody>
       </table>
    </main>

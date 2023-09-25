@@ -99,7 +99,7 @@ form {
    width: 80%;
 }
 
-form input, button {
+form input, button, select {
    width: 60%;
    margin-top: 25px;
    height: 40px;
