@@ -1,0 +1,66 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Produtos -Admin</title>
+   <link rel="stylesheet" href="../index.css">
+</head>
+<body>
+   <h1>Crud banco de dados</h1>
+   <header>
+      <ul>
+         <li class="link"><a href="adicionar.php?id=">Adicionar</a> <input type="text" class="id"></li>
+         <li class="link"><a href="editar.php?id">Editar</a> <input type="text" class="id"></li>
+         <li class="link"><a href="excluir.php?id">Excluir</a><input type="text" class="id"></li>
+         <li class="link"><a href="ler.php?id">Ler</a> <input type="text" class="id"></li>
+      </ul>
+   </header>
+
+   <main class="main">
+      <table class="ler-tabela">
+         <thead>
+            <tr>
+               <th>id</th>
+               <th>nome</th>
+               <th>cpf</th>
+               <th>email</th>
+               <th>telefone</th>
+               <th>Editar</th>
+               <th>Excluir</th>
+            </tr>
+         </thead>
+         <tbody>
+            <!--<?php
+            $sqlProduto = "SELECT * FROM produto ORDER BY id_produto DESC";
+            $resultProduto = $conn->query($sqlUser);
+            while ($row = mysqli_fetch_array($resultUser)) {
+               $idUser = $row['id_user'];
+               echo '
+                  <tr class="linhaTabela">
+                     <td>'.$row['id_user'].'</td>
+                     <td>'.$row['nome'].'</td>
+                     <td>'.$row['cpf'].'</td>
+                     <td>'.$row['email'].'</td>
+                     <td>'.$row['telefone'].'</td>';
+            }
+            ?>-->
+            <tr>
+               <td>05</td>
+               <td>teste</td>
+               <td>teste</td>
+               <td>teste</td>
+               <td>teste</td>
+               <td>teste</td>
+               <td>teste</td>
+            </tr>
+         </tbody>
+      </table>
+   </main>
+
+   <script src="../index.js"></script>
+</body>
+</html>

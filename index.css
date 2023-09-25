@@ -2,6 +2,14 @@
    box-sizing: border-box;
    margin: 0;
    padding: 0;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+   display: flex;
+   padding: 10px;
+   align-items: center;
+   justify-content: center;
 }
 
 header {
@@ -34,5 +42,43 @@ header ul li a {
    margin-left: 8px;
    padding: 5px;
    outline: none;
+   width: 50px;
+}
 
+main {
+   display: flex;
+   align-items: center;
+   width: 80%;
+   margin: auto;
+   margin-top: 100px;
+}
+
+table {
+   text-align: center;
+   margin: auto;
+   width: 80%;
+}
+
+table .id-table {
+   width: 20px;
+}
+
+table th, td, tr {
+   margin: 0px;
+   border-bottom: 2px solid #eee;
+   padding: 10px;
+}
+
+table .img-livro {
+   padding: 0px;
+   height: 40px;
+}
+
+table .img-acao {
+   cursor: pointer;
+   width: 40px;
+}
+
+table {
+   width: 90%;
 }
