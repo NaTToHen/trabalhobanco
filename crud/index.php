@@ -1,10 +1,5 @@
-<?php
-   include('conexao.php');
-?>
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +15,7 @@
       </script>
 
    <main class="main">
-      <table class="ler-tabela">
+      <!--<table class="ler-tabela">
          <thead>
             <tr>
                <th>Id</th>
@@ -48,7 +43,37 @@
             }
             ?>
          </tbody>
-      </table>
+      </table>-->
+      <?php
+      $db = new Conexao();
+      $data = $db->mostraDados('Produtos');
+
+      if (count($data) > 0) {
+         echo '<table class="ler-tabela">
+         <thead>
+            <tr>
+               <th>Id</th>
+               <th>Nome</th>
+               <th>Desc</th>
+               <th>Categoria</th>
+               <th>Fornecedora</th>
+               <th>Valor</th>
+            </tr>
+         </thead>
+         <tbody>';
+         foreach ($data as $row) {
+            echo '
+                  <tr class="linhaTabela">
+                     <td>'.$row['idProduto'].'</td>
+                     <td>'.$row['nome'].'</td>
+                     <td>'.$row['descricao'].'</td>
+                     <td>'.$row['fkCategoria'].'</td>
+                     <td>'.$row['fkFornecedora'].'</td>
+                     <td>R$ '.$row['valor'].'</td>
+                  </tr>';
+         }
+      }
+      ?>
    </main>
 
    <script src="../index.js"></script>
