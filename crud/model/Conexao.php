@@ -1,5 +1,9 @@
 <?php
 
+namespace crud\model;
+use PDO;
+use PDOException;
+
 class Conexao {
    private $host = "localhost";
     private $db_name = "trabalhobanco";

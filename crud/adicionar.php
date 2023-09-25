@@ -1,5 +1,6 @@
 <?php
-   include('conexao.php');
+global $conn;
+include('conexao.php');
 ?>
 
 <!DOCTYPE html>
@@ -19,10 +20,10 @@
       </script>
 
    <main class="main">
-      <form action="adiciona.php" method="post" class="adiciona">
-         <input type="text" placeholder="nome">
-         <input type="text" placeholder="descrição">
-         <input type="text" placeholder="valor">
+      <form action="lib/adiciona.php" method="post" class="adiciona">
+         <input type="text" placeholder="nome" name="nome">
+         <input type="text" placeholder="descrição" name="descricao">
+         <input type="text" placeholder="valor" name="valor">
          <select class="select-form" name="categoria">
                   <option value="" disabled selected>Selecione a categoria</option>
                   <?php
@@ -43,7 +44,7 @@
                      <option value="<?php echo $Fornecedora['idFornecedora'] ?>"><?php echo $Fornecedora['nome'] ?></option>
                   <?php } ?>
          </select>
-         <select class="select-form" name="categoria">
+         <select class="select-form" name="endereco">
                   <option value="" disabled selected>Selecione o endereço</option>
                   <?php
                   $sqlEndereco = "SELECT idEnderecoFabri, cidade, estado, rua FROM EnderecoFabri ORDER BY idEnderecoFabri DESC";
