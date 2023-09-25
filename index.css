@@ -1,0 +1,38 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+header {
+   display: flex;
+   padding: 20px;
+   background: rgb(226, 226, 226);
+   align-items: center;
+   justify-content: center;
+}
+
+header ul {
+   display: flex;
+   gap: 50px;
+}
+
+header ul li {
+   list-style: none;
+   display: flex;
+   align-items: center;
+}
+
+header ul li a {
+   text-decoration: none;
+   font-size: 25px;
+   color: black;
+}
+
+.id {
+   border: none;
+   margin-left: 8px;
+   padding: 5px;
+   outline: none;
+
+}
