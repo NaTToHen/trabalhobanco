@@ -10,15 +10,12 @@
    <link rel="stylesheet" href="../index.css">
 </head>
 <body>
-   <h1>Crud banco de dados</h1>
-   <header>
-      <ul>
-         <li class="link"><a href="adicionar.php?id=">Adicionar</a> <input type="text" class="id"></li>
-         <li class="link"><a href="editar.php?id">Editar</a> <input type="text" class="id"></li>
-         <li class="link"><a href="excluir.php?id">Excluir</a><input type="text" class="id"></li>
-         <li class="link"><a href="ler.php?id">Ler</a> <input type="text" class="id"></li>
-      </ul>
-   </header>
+   <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+   <div w3-include-html="header.php"></div>
+      <script>
+         w3.includeHTML();
+      </script>
 
    <main class="main">
       <table class="ler-tabela">

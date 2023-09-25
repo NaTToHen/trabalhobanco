@@ -33,8 +33,9 @@ header ul li {
 
 header ul li a {
    text-decoration: none;
-   font-size: 25px;
+   font-size: 20px;
    color: black;
+   font-weight: bold;
 }
 
 .id {
@@ -81,4 +82,39 @@ table .img-acao {
 
 table {
    width: 90%;
+}
+
+
+
+
+
+
+
+
+form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: auto;
+   width: 80%;
+}
+
+form input, button {
+   width: 60%;
+   margin-top: 25px;
+   height: 40px;
+   padding: 8px;
+   outline: none;
+   border: none;
+   background: #e6e6e6;
+}
+
+form button {
+   color: white;
+   background: green;
+   cursor: pointer;
+}
+
+.btnExcluir {
+   background: red;
 }
