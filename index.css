@@ -118,3 +118,8 @@ form button {
 .btnExcluir {
    background: red;
 }
+
+.btnEditar {
+   background: yellow;
+   color: black;
+}
