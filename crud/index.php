@@ -49,6 +49,7 @@ include('conexao.php');
          </tbody>
       </table>
    </main>
+   <p class="valorTotal">Valor total: RS 5000.00 </p>
 
    <script src="../index.js"></script>
 </body>
