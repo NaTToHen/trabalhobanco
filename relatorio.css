@@ -1,0 +1,19 @@
+.headerPdf {
+    justify-content: space-around;
+}
+
+table {
+    width: 100%;
+}
+
+main {
+    width: 100%;
+}
+
+.tabelaRelatorio {
+    width: 90%;
+}
+
+h3 {
+    font-size: 15px;
+}

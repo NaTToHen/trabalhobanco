@@ -2,7 +2,14 @@
 
 global $conn;
 include('../conexao.php');
-$id = $_GET['id'];
+$id = $_POST['id'];
 
-$nome = $conn->query("SELECT nome FROM Produto WHERE idProduto = '$id'");
-echo $nome;
+if(isset($id)) {
+    $sqlProduto = $conn->query("DELETE FROM Produto WHERE idProduto = '$id'");
+
+    if ($sqlProduto->num_rows > 0) {
+        header('Location: ../index.php?deletado=false');
+    } else {
+        header('Location: ../index.php?deletado=true');
+    }
+}

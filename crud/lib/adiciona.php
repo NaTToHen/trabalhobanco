@@ -18,15 +18,15 @@ if(!isset($_POST['id'], $_POST['nome'], $_POST['descricao'], $_POST['valor'],
             VALUES ('$nome','$desc','$valor','$fornecedora','$categoria','$endereco')");
 
         if ($insere->num_rows > 0) {
-            header('Location: ../index.php?alterado=false');
+            header('Location: ../index.php?adicionado=true');
         } else {
-            header('Location: ../index.php?alterado=true');
+            header('Location: ../index.php?adicionado=false');
         }
     } else {
-        header('Location: ../index.php?alterado=false');
+        header('Location: ../index.php?adicionado=false');
     }
 } else {
-    header('Location: ../index.php?alterado=false');
+    header('Location: ../index.php?adicionado=false');
 }
 
 

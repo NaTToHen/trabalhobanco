@@ -3,9 +3,9 @@
     include('conexao.php');
     global $conn;
     $id = $_GET['id'];
-    $query = $conn->query("SELECT nome FROM Produto WHERE idProduto = '$id'");
-    $nome = mysqli_fetch_array($query);
-    $nome = $nome['nome'];
+    $query = $conn->query("SELECT * FROM Produto WHERE idProduto = '$id'");
+    $produto = mysqli_fetch_array($query);
+    $nome = $produto['nome'];
 ?>
 
 <!DOCTYPE html>
@@ -26,6 +26,7 @@
 
    <main class="main excluir">
       <form action="lib/exclui.php" method="post" class="adiciona">
+          <input type="hidden" value="<?php echo $produto['idProduto'] ?>" name="id">
          <h1>Tem certeza que quer excluir o produto: <?php echo $nome ?></h1>
          <button type="submit" class="btnExcluir">Excluir</button>
       </form>
