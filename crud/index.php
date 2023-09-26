@@ -33,9 +33,12 @@ include('conexao.php');
          <tbody>
             <?php
             $sqlProduto = "SELECT * FROM ViewProduto ORDER BY idProduto ASC";
+            $resultTotal = $conn->query("SELECT total FROM Total");
+
             $resultProduto = $conn->query($sqlProduto);
+            $total = mysqli_fetch_array($resultTotal);
+
             while ($row = mysqli_fetch_array($resultProduto)) {
-               $idProduto = $row['idProduto'];
                echo '
                   <tr class="linhaTabela">
                      <td>'.$row['idProduto'].'</td>
@@ -49,7 +52,7 @@ include('conexao.php');
          </tbody>
       </table>
    </main>
-   <p class="valorTotal">Valor total: RS 5000.00 </p>
+   <p class="valorTotal">Valor total: R$ <?php echo $total['total'] ?></p>
 
    <script src="../index.js"></script>
 </body>
