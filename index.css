@@ -110,7 +110,7 @@ form {
 
 form input, form button, select {
    width: 60%;
-   margin-top: 25px;
+   margin-top: 2vh;
    height: 40px;
    padding: 8px;
    outline: none;

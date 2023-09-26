@@ -1,5 +1,12 @@
 
-
+<?php
+    include('conexao.php');
+    global $conn;
+    $id = $_GET['id'];
+    $query = $conn->query("SELECT nome FROM Produto WHERE idProduto = '$id'");
+    $nome = mysqli_fetch_array($query);
+    $nome = $nome['nome'];
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,8 +25,8 @@
       </script>
 
    <main class="main excluir">
-      <form action="adiciona.php" method="post" class="adiciona">
-         <h1>Tem certeza que quer excluir o produto: </h1>
+      <form action="lib/exclui.php" method="post" class="adiciona">
+         <h1>Tem certeza que quer excluir o produto: <?php echo $nome ?></h1>
          <button type="submit" class="btnExcluir">Excluir</button>
       </form>
    </main>
