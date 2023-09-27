@@ -18,7 +18,7 @@ $dataAtual = date('d-m-Y H:i');
 <body>
 
 <header class="headerPdf">
-    <h1 class="tituloPdf">Relatório de Categorias/Fornecedoras</h1>
+    <h1 class="tituloPdf">Relatório de Endereços</h1>
     <h3><?php echo $dataAtual ?></h3>
 </header>
 
