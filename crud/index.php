@@ -1,7 +1,44 @@
 <?php
 global $conn;
 include('conexao.php');
-?>
+
+if(isset($_GET["adicionado"])) {
+    if($_GET["adicionado"] == "true") { ?>
+        <div class="toastSucesso toast">
+            <p class="textoToast">Adicionado com sucesso</p>
+        </div>
+    <?php } else if($_GET["adicionado"] == "false") { ?>
+        <div class="toastErro toast">
+            <p class="textoToast">Erro ao adicionar produto</p>
+        </div>
+     <?php }
+}
+
+if(isset($_GET["editado"])) {
+    if($_GET["editado"] == "true") { ?>
+            <div class="toastSucesso toast">
+                <p class="textoToast">Editado com sucesso</p>
+            </div>
+        <?php } else if($_GET["editado"] == "false") { ?>
+            <div class="toastErro toast">
+                <p class="textoToast">Erro ao editar produto</p>
+            </div>
+        <?php }
+}
+
+if(isset($_GET["excluido"])) {
+    if($_GET["excluido"] == "true") { ?>
+        <div class="toastSucesso toast">
+            <p class="textoToast">Deletado com sucesso</p>
+        </div>
+    <?php } else if($_GET["excluido"] == "false") { ?>
+        <div class="toastErro toast">
+            <p class="textoToast">Erro ao deletar produto</p>
+        </div>
+    <?php }
+}?>
+
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -53,7 +90,7 @@ include('conexao.php');
       </table>
    </main>
    <p class="valorTotal">Valor total: R$ <?php echo $total['total'] ?></p>
-
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
    <script src="../index.js"></script>
 </body>
 </html>

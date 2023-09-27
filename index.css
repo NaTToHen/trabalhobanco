@@ -103,6 +103,7 @@ table {
    font-weight: bold;
    padding: 10px;
    background: #e6e6e6;
+   margin-bottom: 50px;
 }
 
 
@@ -172,4 +173,52 @@ form button {
 
 .tituloRelatorio {
    font-size: 20px;
+}
+
+
+
+.toastSucesso {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 300px;
+   height: 8vh;
+   position: absolute;
+   top: 40px;
+   right: 40px;
+   background: #00ff00;
+   box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.34);
+}
+
+.textoToast {
+   color: white;
+   font-weight: bold;
+}
+
+.toastErro {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 300px;
+   height: 8vh;
+   position: absolute;
+   top: 40px;
+   right: 40px;
+   background: red;
+   box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.34);
+}
+
+.textoToast {
+   color: white;
+   font-weight: bold;
+}
+
+.toast {
+   animation-name: example2;
+   animation-duration: 0.8s;
+}
+
+@keyframes example2 {
+   0%   {top: -10%;}
+   100%  {top:40px;}
 }

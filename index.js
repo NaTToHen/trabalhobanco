@@ -15,3 +15,7 @@ function excluirURL() {
         alert("Digite um valor antes de enviar.");
     }
 }
+
+setTimeout(function() {
+    $('.toast').fadeOut('fast');
+}, 5000);

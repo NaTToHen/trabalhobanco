@@ -8,8 +8,8 @@ if(isset($id)) {
     $sqlProduto = $conn->query("DELETE FROM Produto WHERE idProduto = '$id'");
 
     if ($sqlProduto->num_rows > 0) {
-        header('Location: ../index.php?deletado=false');
+        header('Location: ../index.php?excluido=false');
     } else {
-        header('Location: ../index.php?deletado=true');
+        header('Location: ../index.php?excluido=true');
     }
 }

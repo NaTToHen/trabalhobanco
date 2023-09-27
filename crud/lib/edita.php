@@ -19,15 +19,15 @@ if(!empty($_POST['id'])) {
                    fkFornecedora='$fornecedora', fkCategoria='$categoria', fkEnderecoFabri='$endereco' WHERE idProduto='$id'");
 
         if ($insere->num_rows > 0) {
-            header('Location: ../index.php?alterado=false');
+            header('Location: ../index.php?editado=false');
         } else {
-            header('Location: ../index.php?alterado=true');
+            header('Location: ../index.php?editado=true');
         }
     } else {
-        header('Location: ../index.php?alterado=false');
+        header('Location: ../index.php?editado=false');
     }
 } else {
-    header('Location: ../index.php?alterado=false');
+    header('Location: ../index.php?editado=false');
 }
 
 
